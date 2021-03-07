@@ -1,0 +1,61 @@
+/* miniprogram/pages/teamInfo/teamInfo.wxss */
+.block{
+  margin: 20rpx;
+  background-color: white;
+  box-shadow: 2px 5px 5px gainsboro;
+  padding: 20rpx;
+}
+.info-sub-block{
+  background-color: white;
+  padding: 20rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #d3e0ea;
+}
+.info-text{
+  color: #276678;
+  margin: 20rpx;
+  font-size: 20px;
+}
+.info-content{
+  padding: 20rpx;
+  margin: 10rpx auto;
+  border: 1rpx solid #f6f5f5;
+}
+/*---------------*/
+.member-sub-block{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10rpx;
+  border-bottom: 1rpx solid #d3e0ea;
+}
+.member-title{
+  font-size: 25px;
+  text-align: center;
+  color: #276678;
+  border-bottom: 1rpx solid #d3e0ea;
+}
+.member-index{
+  width: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+.member-info{
+  margin: 10rpx auto;
+  font-size: 17px;
+}
+.member-btn{
+  padding-left: 20rpx;
+  border-left: 1rpx solid #d3e0ea;
+}
+.admin-info{
+  margin: 20rpx;
+  font-size: 20px;
+}
+.warn-btn{
+  background-color: #ec4646;
+  color: white;
+}

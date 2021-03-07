@@ -1,0 +1,31 @@
+/* miniprogram/pages/user/square/square.wxss */
+.team-block{
+  background-color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  letter-spacing: 5rpx;
+  padding: 30rpx 10rpx;
+}
+.team-block-right{
+  margin: auto 10rpx;
+  width: 70rpx;
+  height: 70rpx
+}
+.team-block-left{
+  margin: auto 10rpx;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1rpx solid #276678;
+}
+.team-intro{
+  width: 60%;
+  margin: 10rpx;
+}
+.team-count{
+  border-left: 5rpx solid #d3e0ea;
+  padding-left: 40rpx;
+  margin: 10rpx;
+}

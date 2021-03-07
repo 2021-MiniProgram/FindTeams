@@ -1,0 +1,44 @@
+/* miniprogram/pages/user/user.wxss */
+.userInfo{
+  margin: 20rpx;
+  background-color: white;
+  box-shadow: 2px 5px 5px gainsboro;
+  text-align: center;
+  padding: 20rpx;
+}
+.avatar{
+  margin: 10rpx auto;
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 100rpx;
+  display: block;
+}
+.nickName{
+  color: #276678;
+  font-weight: bold;
+  font-size: 50rpx;
+}
+.inputInfo{
+  margin: 40rpx 20rpx;
+  background-color: white;
+  box-shadow: 2px 5px 5px gainsboro;
+  padding: 40rpx;
+}
+.inputBlock{
+  display: flex;
+  margin: 60rpx;
+}
+.inputLable{
+  font-size: 40rpx;
+  width: 40%;
+}
+input{
+  font-weight: bold;
+  font-size: 40rpx;
+  text-align: center;
+  border-bottom: 2px solid #d3e0ea
+}
+.editBtn{
+  background-color: #1687a7;
+  color: white;
+}

@@ -1,0 +1,27 @@
+<!--miniprogram/pages/manage/manage.wxml-->
+<view class="block">
+  <view class="mine-text">我创建的</view>
+  <view wx:for="{{mineList}}" wx:for-index="index" wx:for-item="item" wx:key="_id">
+    <view class="team-block" bindtap="navigate" data-index="{{index}}" data-name="mine">
+      <view class="team-block-right" style="background-color: {{color[index%4]}}"></view>
+      <view class="team-block-left">
+        <view class="team-intro">{{item.intro}}</view>
+        <view class="team-count">{{item.have}}/{{item.num}}</view>
+        <mp-icon icon="arrow" color="black"></mp-icon>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="block">
+  <view class="join-text">我加入的</view>
+  <view wx:for="{{joinList}}" wx:for-index="index" wx:for-item="item" wx:key="_id">
+    <view class="team-block" bindtap="navigate" data-index="{{index}}" data-name="join">
+      <view class="team-block-right" style="background-color: {{color[index%4]}}"></view>
+      <view class="team-block-left">
+        <view class="team-intro">{{item.intro}}</view>
+        <view class="team-count">{{item.have}}/{{item.num}}</view>
+        <mp-icon icon="arrow" color="black"></mp-icon>
+      </view>
+    </view>
+  </view>
+</view>

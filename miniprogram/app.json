@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/user/user",
+    "pages/search/search",
+    "pages/square/square",
+    "pages/found/found",
+    "pages/manage/manage",
+    "pages/teamInfo/teamInfo"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "FindTeams",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/square/square",
+        "text": "Square"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "Search"
+      },
+      {
+        "pagePath": "pages/found/found",
+        "text": "Found"
+      },
+      {
+        "pagePath": "pages/manage/manage",
+        "text": "Manage"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "User"
+      }
+    ]
+  },
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
+  },
+  "usingComponents": {
+    "mp-icon": "weui-miniprogram/icon/icon"
+  }
+}

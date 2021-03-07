@@ -1,0 +1,28 @@
+<!--miniprogram/pages/user/user.wxml-->
+<view wx:if="{{hasUserInfo}}">
+  <view class="userInfo">
+    <image class="avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="nickName">{{userInfo.nickName}}</text>
+  </view>
+  <view class="inputInfo">
+    <form bindsubmit="submitChanges">
+      <view class="inputBlock">
+        <text class="inputLable">年级:</text>
+        <input value="{{inputInfo.grade}}" type="number" placeholder="例:2018" name="grade" disabled="{{!canEdit}}" focus="{{canEdit}}"></input>
+      </view>
+      <view class="inputBlock">
+        <text class="inputLable">QQ号:</text>
+        <input value="{{inputInfo.QQ}}" type="number" placeholder="" name="QQ" disabled="{{!canEdit}}"></input>
+      </view>
+      <view class="inputBlock">
+        <text class="inputLable">微信号:</text>
+        <input value="{{inputInfo.WeChat}}" type="text" placeholder="" name="WeChat" disabled="{{!canEdit}}"></input>
+      </view>
+      <button wx:if="{{!canEdit}}" bindtap="editUserInfo" class="editBtn">编辑信息</button>
+      <button wx:else type="primary" form-type="submit">保存</button>
+    </form>
+  </view>
+</view>
+<view wx:else class="auth">
+  <button class="authBtn" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权</button>
+</view>

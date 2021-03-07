@@ -1,0 +1,42 @@
+<!--miniprogram/pages/teamInfo/teamInfo.wxml-->
+<view class="block">
+  <view class="info-sub-block">
+    <view class="info-text">简介</view>
+    <view class="info-content">{{info.intro}}</view>
+  </view>
+  <view class="info-sub-block">
+    <view class="info-text">详情</view>
+    <view class="info-content">{{info.info}}</view>
+  </view>
+  <view class="info-sub-block">
+    <view class="info-text">期望人数：{{info.num}}</view>
+    <view class="info-text">已有人数：{{info.have}}</view>
+  </view>
+</view>
+<view wx:if="{{isAdmin}}">
+  <view class="block">
+    <view class="member-title">成员</view>
+    <view wx:for="{{memberList}}" wx:for-index="index" wx:for-item="item" wx:key="openID" class="member-sub-block">
+      <view class="member-index" style="background-color: {{color[index%4]}};">{{index+1}}</view>
+      <view class="member-info">
+        <view>年级: {{item.inputInfo.grade}}</view>
+        <view>QQ: {{item.inputInfo.QQ}}</view>
+        <view>WeChat: {{item.inputInfo.WeChat}}</view>
+      </view>
+      <mp-icon icon="close" color="#ec4646" size="40" class="member-btn" data-index="{{index}}" bindtap="dismiss">
+      </mp-icon>
+    </view>
+  </view>
+  <button class="warn-btn" bindtap="delete">删除</button>
+</view>
+<view wx:else>
+  <view wx:if="{{joinOK}}">
+    <view  class="block">
+      <view class="info-text">负责人联系方式</view>
+      <view class="admin-info">QQ: {{info.admin.QQ}}</view>
+      <view class="admin-info">WeChat: {{info.admin.WeChat}}</view>
+    </view>
+    <button class="warn-btn" bindtap="quit">退出</button>
+  </view>
+  <button wx:else type="primary" bindtap="join">加入</button>
+</view>
