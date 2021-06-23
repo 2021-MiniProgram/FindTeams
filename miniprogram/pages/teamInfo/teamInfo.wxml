@@ -1,4 +1,4 @@
-<!--miniprogram/pages/teamInfo/teamInfo.wxml-->
+<!--miniprogram/pages/teamInfo/teamInfo.wxml--> 
 <view class="block">
   <view class="info-sub-block">
     <view class="info-text">简介</view>
@@ -9,8 +9,8 @@
     <view class="info-content">{{info.info}}</view>
   </view>
   <view class="info-sub-block">
-    <view class="info-text">期望人数：{{info.num}}</view>
-    <view class="info-text">已有人数：{{info.have}}</view>
+    <view class="num-people">期望人数：{{info.num}}</view>
+    <view class="num-people">已有人数：{{info.have}}</view>
   </view>
 </view>
 <view wx:if="{{isAdmin}}">
@@ -33,10 +33,13 @@
   <view wx:if="{{joinOK}}">
     <view  class="block">
       <view class="info-text">负责人联系方式</view>
-      <view class="admin-info">QQ: {{info.admin.QQ}}</view>
-      <view class="admin-info">WeChat: {{info.admin.WeChat}}</view>
+      <view class="admin-info">QQ: {{admin.QQ}}</view>
+      <view class="admin-info">WeChat: {{admin.WeChat}}</view>
     </view>
     <button class="warn-btn" bindtap="quit">退出</button>
   </view>
-  <button wx:else type="primary" bindtap="join">加入</button>
+  <view wx:else>
+    <button wx:if="{{!isFull}}" type="primary" bindtap="subsMessage">加入</button>
+    <button wx:else class="full-btn">队伍已满</button>
+  </view>
 </view>

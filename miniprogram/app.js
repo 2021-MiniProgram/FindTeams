@@ -6,7 +6,8 @@ App({
       grade: "",
       QQ: "",
       WeChat: ""
-    }
+    },
+    teamId: ""
   },
   onLaunch: function () {
     if (!wx.cloud) {

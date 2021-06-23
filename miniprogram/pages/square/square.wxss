@@ -1,4 +1,7 @@
 /* miniprogram/pages/user/square/square.wxss */
+.box {
+  
+}
 .team-block{
   background-color: white;
   font-size: 20px;
@@ -8,12 +11,12 @@
   letter-spacing: 5rpx;
   padding: 30rpx 10rpx;
 }
-.team-block-right{
+.team-block-left{
   margin: auto 10rpx;
   width: 70rpx;
   height: 70rpx
 }
-.team-block-left{
+.team-block-right{
   margin: auto 10rpx;
   width: 80%;
   display: flex;

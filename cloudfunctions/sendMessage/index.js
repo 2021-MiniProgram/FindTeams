@@ -9,21 +9,22 @@ exports.main = async (event, context) => {
     const result = await cloud.openapi.subscribeMessage.send({
         touser: event.openID,
         lang: 'zh_CN',
+        page: 'pages/manage/manage',
         data: {
           thing1: {
-            DATA: event.name
+            value: event.name
           },
-          phrase2: {
-            DATA: "人数"+event.schedule
-          },
+          // phrase2: {
+          //   value: '新成员加入'
+          // },
           thing3: {
-            DATA: '请及时打开小程序查看队伍信息'
+            value: '请及时打开小程序查看队伍信息'
           },
           thing4: {
-            DATA:  event.alteration
+            value:  event.alteration
           }
         },
-        templateId: 'ZdutduKwsh4BuFsDQcKGNvMvUdxlIkCfbP6XtPUWdSM',
+        templateId: 'ZdutduKwsh4BuFsDQcKGNnBMszdn0VbTvuUbwjpmcV4',
         miniprogramState: 'developer'
       })
     return result

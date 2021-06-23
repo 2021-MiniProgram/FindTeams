@@ -17,26 +17,37 @@
   "sitemapLocation": "sitemap.json",
   "style": "v2",
   "tabBar": {
+    "backgroundColor": "#f6f6f6",
     "list": [
       {
         "pagePath": "pages/square/square",
-        "text": "Square"
+        "text": "Square",
+        "iconPath": "./images/tabbar/usergorup.png",
+        "selectedIconPath": "./images/tabbar/usergorup_active.png"
       },
       {
         "pagePath": "pages/search/search",
-        "text": "Search"
+        "text": "Search",
+        "iconPath": "./images/tabbar/search.png",
+        "selectedIconPath": "./images/tabbar/search_active.png"
       },
       {
         "pagePath": "pages/found/found",
-        "text": "Found"
+        "text": "Found",
+        "iconPath": "./images/tabbar/found.png",
+        "selectedIconPath": "./images/tabbar/found_active.png"
       },
       {
         "pagePath": "pages/manage/manage",
-        "text": "Manage"
+        "text": "Manage",
+        "iconPath": "./images/tabbar/manage.png",
+        "selectedIconPath": "./images/tabbar/manage_active.png"
       },
       {
         "pagePath": "pages/user/user",
-        "text": "User"
+        "text": "User",
+        "iconPath": "./images/tabbar/user.png",
+        "selectedIconPath": "./images/tabbar/user_active.png"
       }
     ]
   },

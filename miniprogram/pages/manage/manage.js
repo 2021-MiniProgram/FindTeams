@@ -15,6 +15,7 @@ Page({
       _openid: app.globalData.openID
     }).get().then(
       res=>{
+        // console.log(res);
         this.setData({
           mineList: res.data
         })
@@ -32,13 +33,16 @@ Page({
     )
   },
   navigate: function(e){
+    console.log(e);
     if(e.currentTarget.dataset.name=="mine"){
+      app.globalData.teamId=this.data.mineList[e.currentTarget.dataset.index]._id;
       wx.navigateTo({
-        url: '../teamInfo/teamInfo?info='+JSON.stringify(this.data.mineList[e.currentTarget.dataset.index])
+        url: '../teamInfo/teamInfo?id='+this.data.mineList[e.currentTarget.dataset.index]._id
       })
     }else{
+      app.globalData.teamId=this.data.joinList[e.currentTarget.dataset.index]._id;
       wx.navigateTo({
-        url: '../teamInfo/teamInfo?info='+JSON.stringify(this.data.joinList[e.currentTarget.dataset.index])
+        url: '../teamInfo/teamInfo?id='+this.data.joinList[e.currentTarget.dataset.index]._id
       })
     }
   }

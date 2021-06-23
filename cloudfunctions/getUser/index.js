@@ -7,5 +7,7 @@ cloud.init()
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   const db = cloud.database()
-  return db.collection("Users").doc(wxContext.OPENID).get();
+  console.log("getUser成功");
+  //返回用户在数据库中存储的信息
+  return db.collection("Users").doc(wxContext.OPENID).get()
 }

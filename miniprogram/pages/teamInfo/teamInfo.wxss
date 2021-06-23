@@ -1,6 +1,6 @@
 /* miniprogram/pages/teamInfo/teamInfo.wxss */
 .block{
-  margin: 20rpx;
+  margin: 15rpx;
   background-color: white;
   box-shadow: 2px 5px 5px gainsboro;
   padding: 20rpx;
@@ -14,7 +14,12 @@
 .info-text{
   color: #276678;
   margin: 20rpx;
-  font-size: 20px;
+  font-size: 18px;
+}
+.num-people {
+  color: #276678;
+  margin: 20rpx;
+  font-size: 16px;
 }
 .info-content{
   padding: 20rpx;
@@ -53,9 +58,15 @@
 }
 .admin-info{
   margin: 20rpx;
-  font-size: 20px;
+  font-size: 16px;
 }
 .warn-btn{
+  margin: 20rpx;
   background-color: #ec4646;
+  color: white;
+}
+.full-btn{
+  margin: 20rpx;
+  background-color: #c0c0c0;
   color: white;
 }

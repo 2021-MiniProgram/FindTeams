@@ -3,7 +3,7 @@
   <view class="block">
     <view style="border-bottom: 1rpx solid #d3e0ea; padding: 10rpx">
       <text class="text">队伍简介</text>
-      <input class="input" name="intro" value="{{intro}}" type="text" placeholder="竞赛/拼车/..." maxlength="20"></input>
+      <input class="input" name="intro" value="{{intro}}" type="text" placeholder="如：竞赛/拼车/..." maxlength="20"></input>
     </view>
   </view>
   <view class="block">
